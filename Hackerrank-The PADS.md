@@ -1,9 +1,8 @@
 
 ### Question link: https://www.hackerrank.com/challenges/the-pads/problem ###
-
+#### 2020-01-04 ####
 **Answers**
-
-```
+```sql
 select concat(Name,'(',substring(Occupation,1,1),')')
 from OCCUPATIONS
 order by Name;
@@ -17,3 +16,6 @@ group by Occupation) as temp
 order by ct,Occupation
 ```
 
+**Highlight**
+#### 1. use of `CONCAT`, `SUBSTRING (STRING, START, LENGTH)`
+#### 2. Subquery
