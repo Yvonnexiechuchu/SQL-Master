@@ -21,3 +21,26 @@ WHERE   E.Salary= Temp.maxs
 **Highlight**
 #### 1. there might be 2 different employees who share the same salary and happen to be the highest, `order by limit 1` will not work
 
+**Solution provided by leetcode**
+
+```sql
+SELECT
+    Department.name AS 'Department',
+    Employee.name AS 'Employee',
+    Salary
+FROM
+    Employee
+        JOIN
+    Department ON Employee.DepartmentId = Department.Id
+WHERE
+    (Employee.DepartmentId , Salary) IN
+    (   SELECT
+            DepartmentId, MAX(Salary)
+        FROM
+            Employee
+        GROUP BY DepartmentId
+	)
+```
+#### It's better not to use `IN` and `NOT IN` since they are inefficient
+
+
