@@ -18,4 +18,4 @@ ORDER BY DATEDIFF(End_Date, Start_Date), Start_Date
 **Highlight**
 #### 1. For the Date to be used with `Group by` clause, it should either be mentioned in `Group by` Clause or Aggregate function. Here, `Group by` is used on `start_date`. So, `end_date` needs to be added in aggregate function. You can use MIN or MAX for it.
 
-#### 2. Subquery
+#### 
