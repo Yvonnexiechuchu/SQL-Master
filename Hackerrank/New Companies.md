@@ -27,6 +27,7 @@ GROUP BY    1,2
 ORDER BY    1
 ```
 #### The code seems so redundant when using 4 consecutive joins, instead there is another way to do it simpler
+
 **Answers 2**
 ```sql
 select c.company_code, c.founder, 
