@@ -24,3 +24,14 @@ SELECT S.Score,
 FROM    Scores S
 ORDER BY S.Score desc
 ```
+
+**180. Consecutive Numbers**
+```sql
+SELECT DISTINCT a.num as ConsecutiveNums
+from Logs a
+inner join Logs b
+on a.Id + 1 = b.Id and a.Num = b.Num
+inner join Logs c
+on a.Id+2 = c.Id and a. Num = c.Num
+ ```
+ use inner join to find out consecutive relationship between different rows
